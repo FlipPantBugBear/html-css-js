@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lamp.css">
+</head>
+<body>
+    <div class="nav">
+        <p>Night Mode</p>
+        <button onclick="hi()" id="btn"><span></span></button>
+    </div>
+    <div class="l">
+        <div class="l1">
+            <p><img src="./images/lamp.png" id="lamp1"></p>
+            <h1><img src="./images/light.png" id="light1" class="light"></h1>
+     </div>
+     <div class="l2">
+         <p><img src="./images/lamp.png" id="lamp2"></p>
+        <h1><img src="./images/light.png" id="light2" class="light"></h1>
+ 
+     </div>
+    </div>
+           
+
+    <script>
+         var btn = document.getElementById("btn");
+        var lights = document.querySelectorAll(".light"); // Select all elements with the "light" class
+
+        function hi() {
+            btn.classList.toggle("act"); // Toggle the button class
+            lights.forEach((light) => {
+                light.classList.toggle("on1"); // Toggle the "on1" class on each light
+            });
+        }
+    </script>
+</body>
+</html>
